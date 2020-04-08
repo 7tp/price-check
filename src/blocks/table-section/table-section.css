@@ -1,0 +1,18 @@
+@import url(./__title/table-section__title.css);
+@import url(./__seller-info/table-section__seller-info.css);
+
+.table-section {
+    display: flex;
+    flex-direction: column;
+
+    width: 794px;
+    margin: 0 auto 40px auto;
+    padding: 45px 45px 45px 80px;
+    box-sizing: border-box;
+
+    background-color: #fff;
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: .95em;
+    line-height: 1.15em;
+}

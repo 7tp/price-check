@@ -1,0 +1,12 @@
+.subtitles {
+    display: grid;
+    grid-template-areas: none;
+    grid-template-columns: 2fr repeat(4, minmax(100px, 1fr)) auto;
+    grid-gap: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    align-items: center;
+    
+    background-color: #c8c8c8;
+    border-radius: 5px;
+}

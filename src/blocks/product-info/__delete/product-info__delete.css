@@ -1,0 +1,6 @@
+.product-info__delete {
+    background: url(../../../img/delete-16x16.png) center no-repeat;
+    background-color: transparent;
+    border: none;
+    height: 1em;
+}

@@ -1,0 +1,14 @@
+@import url(./__sign/released__sign.css);
+@import url(./__sales-position/released__sales-position.css);
+@import url(./__sales-name/released__sales-name.css);
+@import url(./__subtext/released__subtext.css);
+
+.released {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    text-align: center;
+    width: fit-content;
+    font-size: .8em;
+    line-height: 1.3em;
+}

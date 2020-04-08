@@ -1,0 +1,9 @@
+.check__main {
+    font-size: 1.5em;
+}
+
+@media screen and (max-width: 450px) {
+    .check__main {
+        font-size: 1.3em;
+    }
+}

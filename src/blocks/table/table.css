@@ -1,0 +1,10 @@
+@import url(./__header/table__header.css);
+@import url(./__product/table__product.css);
+@import url(./__total/table__total.css);
+
+.table {
+    width: 669px;
+    border-collapse: collapse;
+    font-size: .8em;
+    line-height: 1.5em;
+}
