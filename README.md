@@ -6,5 +6,8 @@ forming price check in roubles in pdf
 ## Instuction
 Open here: https://7tp.github.io/price-check/
 
+## bugs
+not working in Microsoft Edge, doesn't read pattern in input properly
+
 ## author
 Iakovleva Irina
