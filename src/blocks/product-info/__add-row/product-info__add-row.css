@@ -1,0 +1,11 @@
+.product-info__add-row {
+    margin-top: 5px;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+}
+
+.product-info__add-row img {
+    height: 100%;
+    vertical-align: top;
+}

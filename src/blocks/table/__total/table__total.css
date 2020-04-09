@@ -1,0 +1,6 @@
+@import url(./_border/table__total_border.css);
+
+.table__total {
+    text-align: end;
+    padding: 0 10px 0 10px;
+}

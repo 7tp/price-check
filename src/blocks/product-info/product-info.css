@@ -1,0 +1,32 @@
+@import url(./__label/product-info__label.css);
+@import url(./__measure/product-info__measure.css);
+@import url(./__delete/product-info__delete.css);
+@import url(./__add-row/product-info__add-row.css);
+@import url(./__add-row-img/product-info__add-row-img.css);
+
+.product-info {
+    display: grid;
+    grid-template-areas: none;
+    grid-template-columns: 2fr repeat(4, minmax(100px, 1fr)) auto;
+    grid-auto-rows: auto;
+    grid-gap: 5px;
+    grid-auto-rows: auto;
+
+    margin-bottom: 5px;
+
+    text-align: center;
+    align-items: end;
+}
+
+.product-info:last-of-type {
+    margin-bottom: 0;
+}
+/*
+@media screen and (max-width: 634px) {
+    .product-info {
+        grid-template-areas:
+        "name name name name"
+        "measure amount price sum";
+        grid-template-columns: repeat(4, minmax(50px, 1fr));
+    }
+} */

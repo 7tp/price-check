@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Competible" content="ie=edge">
+    <meta name="description" content="Begupeku ввод данных">
+    <meta name="keywords" content="HTML, CSS, JS">
+    <meta name="author" content="Irina Iakovleva">
+    <link rel="icon" href="<%=require('./img/favicon-32x32.png')%>">
+    <title>Ввод данных</title>
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+</head>
+<body>
+    <main class="main">
+        <section class="check">
+            <h1 class="check__main">Товарный чек заполнить, распечатать</h1>
+            <form class="check__form" name="check-form">
+                <div class="block">
+                    <label class="check__label">
+                        <div>Товарный чек №:</div>
+                        <input name="check-number" class="text-color" required>
+                    </label>
+                    <label class="check__label">
+                        <div>Товарный чек от:</div>
+                        <input name="check-date" class="text-color" type="date" required>
+                    </label>
+                </div>
+                <div class="block">
+                    <h3 class="title">Информация о продавце:</h3>
+                    <label class="check__label">
+                        <div>Наименование продавца:</div>
+                        <input name="seller-name" class="text-color" value="ИП Винокуров Р.Р." required>
+                    </label>
+                    <label class="check__label">
+                        <div>Адрес продавца:</div>
+                        <input name="seller-address" class="text-color">
+                    </label>
+                    <label class="check__label">
+                        <div>ИНН продавца:</div>
+                        <input name="seller-inn" class="text-color" value="142501252787" placeholder="10 или 12 цифр" pattern="\d{10}|\d{12}" required>
+                    </label>
+                    <label class="check__label">
+                        <div>КПП продавца:</div>
+                        <input name="seller-kpp" class="text-color" placeholder="9 цифр" pattern="\d{9}">
+                    </label>
+                    <h3 class="title">Товар отпустил:</h3>
+                    <label class="check__label">
+                        <div>Должность:</div>
+                        <input name="sales-position" class="text-color">
+                    </label>
+                    <label class="check__label">
+                        <div>Фамилия И. О.:</div>
+                        <input name="sales-name" class="text-color" value="Бондарь В. В." required>
+                    </label>
+                </div>  
+                <div class="block">
+                    <h3 class="title">Наименование товара, работ, услуг подлежащих оплате по счету:</h3>
+                    <div class="subtitles">
+                        <div>Наименование товара, работ, услуг</div>
+                        <div>Ед. изм. (шт., кг и т.д.)</div>
+                        <div>Кол-во (единиц)</div>
+                        <div>Цена за единицу</div>
+                        <div>Сумма</div>
+                        <div class="empty-div"></div>
+                    </div>
+                    <div class="products">
+                  
+                        <template id="template-products">
+                            <div class="product-info">
+                                <label class="product-info__label product-info__name">
+                                    <input name="product-name" class="text-color" required>
+                                </label>
+                                <label class="product-info__label">
+                                    <input list="measure" name="product-measure" class="product-info__measure text-color">
+                                    <datalist id="measure">
+                                        <option value=""></option>
+                                        <option value="шт.">шт.</option>
+                                        <option value="кг">кг</option>
+                                        <option value="грамм">грамм</option>
+                                    </datalist>
+                                </label>
+                                <label class="product-info__label">
+                                    <input name="product-amount" class="product-info__amount text-color" pattern="\d+" required>
+                                </label>
+                                <label class="product-info__label">
+                                    <input name="product-price" class="product-info__price text-color" pattern="\d+(\.(\d|\d{2}))?" required>
+                                </label>
+                                <label class="product-info__label">
+                                    <input name="product-sum" class="product-info__sum text-color">
+                                </label>
+                                <button type="button" class="product-info__delete"></button>
+                            </div>
+                        </template>
+
+                    </div>
+                   
+                    <button type="button" class="product-info__add-row"><img src="<%=require('./img/plus-16x16.png')%>" alt="X" class="product-info__add-row-img"> Добавить строку</button>
+                    
+                </div>
+                <label>
+                    <button class="button">Печать</button>
+                </label>
+            </form>
+
+        </section> 
+      
+    </main>
+    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+</body>
+</html>

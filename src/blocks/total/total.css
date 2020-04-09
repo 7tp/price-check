@@ -1,0 +1,6 @@
+@import url(./__text/total__text.css);
+
+.total {
+    margin: 1em 0 1em 0;
+    font-size: .8em;
+}
