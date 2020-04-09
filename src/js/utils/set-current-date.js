@@ -1,6 +1,6 @@
 'use strict';
 
-const setCurrentDate = () => {
+export default function setCurrentDate() {
     const checkDate = document.querySelector('input[name=check-date]');
 
     const today = new Date;
@@ -13,4 +13,3 @@ const setCurrentDate = () => {
     const todayDate = `${today.getFullYear()}-${month}-${day}`;
     checkDate.value = todayDate;
 }
-setCurrentDate();

@@ -1,0 +1,11 @@
+@import url(./vendor/normalize.css);
+@import url(./vendor/fonts.css);
+
+@import url(./blocks/main/main.css);
+
+@import url(./blocks/popup/popup.css);
+@import url(./blocks/table-section/table-section.css);
+@import url(./blocks/table/table.css);
+
+@import url(./blocks/released/released.css);
+@import url(./blocks/total/total.css);

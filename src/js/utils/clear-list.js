@@ -1,6 +1,6 @@
 'use srtict';
 
-const clearList = () => {
+export default function clearList() {
      
     document.querySelector('.input-seller-name').textContent = '';
     document.querySelector('.input-seller-inn-kpp').textContent = '';

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Competible" content="ie=edge">
+    <meta name="description" content="Begupeku ввод данных">
+    <meta name="keywords" content="HTML, CSS, JS">
+    <meta name="author" content="Irina Iakovleva">
+    <link rel="icon" href="<%=require('./img/favicon-32x32.png')%>">
+    <title>Вывод данных</title>
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.check.css %>">
+</head>
+<body>
+    <main class="main">
+
+        <section class="table-pdf">
+
+            <div class="table-section" id="table-pdf">
+                <div class="table-section__seller-info">Продавец: <span class="input-seller-name"></span>, <span class="input-seller-inn-kpp"></span></div>
+                <div class="table-section__seller-info input-seller-address">здесь будет адрес</div>
+                <h3 class="table-section__title">Товарный чек №<span class="input-check-number"></span> от <span class="input-check-date"></span></span></h3>
+                <table class="table">
+                    <colgroup>
+                        <col width="5%">
+                        <col width="44%">
+                        <col width="8%">
+                        <col width="15%">
+                        <col width="8%">
+                        <col width="20%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="table__header">№</th>
+                            <th class="table__header">Товар</th>
+                            <th class="table__header">Ед.</th>
+                            <th class="table__header">Цена</th>
+                            <th class="table__header">Кол-во</th>
+                            <th class="table__header">Сумма</th>
+                        </tr>                 
+                    </thead>
+                    <tbody class="table__body">                   
+                    </tbody>
+
+                    <template id="template-row">
+                        <tr class="table__list">
+                            <td class="table__product table__product_centered input-numbering"></td>
+                            <td class="table__product table__product_align-start input-product-name"></td>
+                            <td class="table__product table__product_centered input-product-measure"></td>
+                            <td class="table__product input-product-price"></td>
+                            <td class="table__product input-product-amount"></td>
+                            <td class="table__product input-product-sum"></td>
+                        </tr>
+                    </template>
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="5" class="table__total">Итого:</td>
+                            <td class="table__total table__total_border input-total"></td>
+                        </tr>             
+                    </tfoot>
+                </table>
+
+                <div class="total">
+                    <p class="total__text">Всего наименований <span class="input-total-amount"></span>, на сумму <span class="input-total"></span> руб</p>
+                    <p class="total__text total__text_bold input-total-text"></p>
+                </div>
+
+                <div class="released">
+                    <div>Отпустил</div>
+                    <div class="">
+                        <div class="released__sign"></div>
+                        <span class="released__subtext">(подпись)</span>
+                    </div>
+                    <div class="">
+                        <div class="released__sales-position input-sales-position"></div>
+                        <span class="released__subtext">(должность)</span>
+                    </div>
+                    <div class="">
+                        <div class="released__sales-name input-sales-name"></div>
+                        <span class="released__subtext released__subtext_name">(Ф.И.О.)</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+    </main>
+    <script src="<%= htmlWebpackPlugin.files.chunks.check.entry %>"></script>
+</body>
+</html>

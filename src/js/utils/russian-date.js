@@ -1,6 +1,6 @@
 'use strict';
 
-const setRussianDate = (date) => {
+export default function setRussianDate(date) {
     let newDate = new Date(date);
     let month = newDate.toLocaleString('ru',  { month: 'long', day: '2-digit'});
     let day = month.slice(0, 2);

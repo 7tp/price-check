@@ -10,10 +10,3 @@
 @import url(./blocks/empty-div/empty-div.css);
 @import url(./blocks/product-info/product-info.css);
 @import url(./blocks/text-color/text-color.css);
-
-@import url(./blocks/popup/popup.css);
-@import url(./blocks/table-section/table-section.css);
-@import url(./blocks/table/table.css);
-
-@import url(./blocks/released/released.css);
-@import url(./blocks/total-text/total-text.css);

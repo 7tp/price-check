@@ -7,9 +7,9 @@
     <meta name="description" content="Begupeku ввод данных">
     <meta name="keywords" content="HTML, CSS, JS">
     <meta name="author" content="Irina Iakovleva">
-    <link rel="icon" href="./img/favicon-32x32.png">
+    <link rel="icon" href="<%=require('./img/favicon-32x32.png')%>">
     <title>Ввод данных</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 </head>
 <body>
     <main class="main">
@@ -95,8 +95,8 @@
 
                     </div>
                    
-                    <button type="button" class="product-info__add-row"><img src="./img/plus-16x16.png" class="product-info__add-row-img"> Добавить строку</button>
- 
+                    <button type="button" class="product-info__add-row"><img src="<%=require('./img/plus-16x16.png')%>" alt="X" class="product-info__add-row-img"> Добавить строку</button>
+                    
                 </div>
                 <label>
                     <button class="button">Печать</button>
@@ -104,85 +104,8 @@
             </form>
 
         </section> 
-
-        <section class="table-pdf ">
-
-            <div class="table-section" id="table-pdf">
-                <div class="table-section__seller-info">Продавец: <span class="input-seller-name"></span>, <span class="input-seller-inn-kpp"></span></div>
-                <div class="table-section__seller-info input-seller-address">здесь будет адрес</div>
-                <h3 class="table-section__title">Товарный чек №<span class="input-check-number"></span> от <span class="input-check-date"></span></span></h3>
-                <table class="table">
-                    <colgroup>
-                        <col width="5%">
-                        <col width="44%">
-                        <col width="8%">
-                        <col width="15%">
-                        <col width="8%">
-                        <col width="20%">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th class="table__header">№</th>
-                            <th class="table__header">Товар</th>
-                            <th class="table__header">Ед.</th>
-                            <th class="table__header">Цена</th>
-                            <th class="table__header">Кол-во</th>
-                            <th class="table__header">Сумма</th>
-                        </tr>                 
-                    </thead>
-                    <tbody class="table__body">                   
-                    </tbody>
-
-                    <template id="template-row">
-                        <tr class="table__list">
-                            <td class="table__product table__product_centered input-numbering">1</td>
-                            <td class="table__product table__product_align-start input-product-name">2</td>
-                            <td class="table__product table__product_centered input-product-measure">3</td>
-                            <td class="table__product input-product-price">4</td>
-                            <td class="table__product input-product-amount">5</td>
-                            <td class="table__product input-product-sum">6</td>
-                        </tr>
-                    </template>
-
-                    <tfoot>
-                        <tr>
-                            <td colspan="5" class="table__total">Итого:</td>
-                            <td class="table__total table__total_border input-total"></td>
-                        </tr>             
-                    </tfoot>
-                </table>
-                
-                <p class="total-text">Всего наименований <span class="input-total-amount"></span>, на сумму <span class="input-total"></span> руб</p>
-                <p class="total-text input-total-text"></p>
-                <div class="released">
-                    <div>Отпустил</div>
-                    <div class="">
-                        <div class="released__sign"></div>
-                        <span class="released__subtext">(подпись)</span>
-                    </div>
-                    <div class="">
-                        <div class="released__sales-position input-sales-position"></div>
-                        <span class="released__subtext">(должность)</span>
-                    </div>
-                    <div class="">
-                        <div class="released__sales-name input-sales-name"></div>
-                        <span class="released__subtext released__subtext_name">(Ф.И.О.)</span>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        
+      
     </main>
-    <script src="set-current-date.js"></script>
-    <script src="./add-delete-form-row.js"></script>
-    <script src="./clear-list.js"></script>
-    <script src="./into-money.js"></script>
-    <script src="./change-value.js"></script>
-    <script src="send-form.js"></script>
-    <script src="./index.js"></script>
-    <script src="./russian-date.js"></script>
-    <script src="./products-list.js"></script>
-    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
 </html>

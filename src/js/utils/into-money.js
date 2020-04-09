@@ -1,6 +1,6 @@
 'use strict';
 
-const intoMoney = (price) => {
+export default function intoMoney(price) {
     price = price.toFixed(2);
     const kop = price.replace(/\d+\./, '.');
     price = price.replace(/\.\d+/, '');

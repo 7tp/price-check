@@ -1,8 +1,6 @@
 'use srtict';
 
-const addFormRowButton = document.querySelector('.product-info__add-row');
-
-const addRow = () => {
+export default function addRow() {
     const templateProducts = document.querySelector('#template-products').content.querySelector('.product-info');
     const templateClone = templateProducts.cloneNode(true);
     const sum = templateClone.querySelector('input[name=product-sum]');
@@ -41,5 +39,3 @@ const addRow = () => {
         sum.value = z.toFixed(2);
     })
 }
-
-addFormRowButton.addEventListener('click', addRow);

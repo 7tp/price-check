@@ -1,9 +1,5 @@
 @import url(./__label/product-info__label.css);
-@import url(./__name/product-info__name.css);
 @import url(./__measure/product-info__measure.css);
-@import url(./__amount/product-info__amount.css);
-@import url(./__price/product-info__price.css);
-@import url(./__sum/product-info__sum.css);
 @import url(./__delete/product-info__delete.css);
 @import url(./__add-row/product-info__add-row.css);
 @import url(./__add-row-img/product-info__add-row-img.css);
@@ -33,4 +29,4 @@
         "measure amount price sum";
         grid-template-columns: repeat(4, minmax(50px, 1fr));
     }
-}
+} */
